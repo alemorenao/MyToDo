@@ -1,0 +1,12 @@
+<ul>
+    <span (click)="printSomething()">To Dos</span>
+  
+    @for (task of toDolist; track task.Id) {
+        <li>    
+        <p style="font-size: larger;">{{ task.description }}</p>
+        <p>{{ task.details }}</p>
+        <p>{{ task.dateTime }} </p>
+        <br>
+    </li>
+      }
+</ul>
