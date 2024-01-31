@@ -11,10 +11,4 @@ import {  ToDo  } from '../../../../../interfaces/item'
 
 export class TodoComponent {
   @Input() toDolist: ToDo[] = []
-  
-  printSomething(){
-    console.log("Hi " + this.toDolist)
-  }
-  
-  
 }

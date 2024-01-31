@@ -1,1 +1,42 @@
-<button (click)="updateShowTime()">Add a task</button><br><br>
+<!-- Button to Open the Modal -->
+<button class="btn btn-primary mx-auto d-block" data-bs-toggle="modal" data-bs-target="#myModal">Add a task</button>
+<br>
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+  
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">New Task</h4>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+  
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div class="container mt-3">
+            <form class="was-validated">
+              <div class="form-floating mb-3 mt-3">
+                <input id="title" class="form-control" type="text" [(ngModel)]="myTitle" name="title" required>
+                <label for="title">Title</label>
+              </div>
+              
+              <div class="form-floating mb-3 mt-3">
+                <input id="details" class="form-control" type="text" [(ngModel)]="myDetails" name="details" required>
+                <label for="details">Details</label>
+              </div>
+              
+              <div class="form-floating mb-3 mt-3">  
+                <input id="dateTime" class="form-control" type="datetime-local" [(ngModel)]="myTime" name="dateTime" required> 
+                <label for="dateTime">Date | Time</label>
+              </div>
+              <button type="submit" class="btn btn-primary" (click)="handleSubmit()" data-bs-dismiss="modal">Submit</button>
+            </form>
+          </div>
+        </div>
+  
+        
+  
+      </div>
+    </div>
+  </div>
