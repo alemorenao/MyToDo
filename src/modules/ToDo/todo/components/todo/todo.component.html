@@ -1,12 +1,17 @@
-<ul>
-    <p class="h4">To Dos</p>
-  
-    @for (task of toDolist; track task.Id) {
-        <li>    
-        <p style="font-size: larger;">{{ task.description }}</p>
-        <p>{{ task.details }}</p>
-        <p>{{ task.dateTime }} </p>
-        <br>
-    </li>
-      }
-</ul>
+<p class="h4">To Dos</p>
+    <ul>
+        
+        @for (task of toDolist; track task.Id) {
+            @if (task.done == false) {
+                <li>    
+                    <p style="font-size: larger;">{{ task.description }}</p>
+                    <p>{{ task.details }}</p>
+                    <p>{{ task.dateTime }} </p>
+                    <app-done-button [ToDoTasks]="toDolist" [ButtonId]="task.Id"></app-done-button>
+                    <br>
+                </li>
+            }
+        }
+    </ul>
+
+

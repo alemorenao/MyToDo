@@ -1,0 +1,8 @@
+<app-add-task (brandNewItem)="addTask($event)"></app-add-task>
+
+@if(areThereUndone()){
+    <app-todo  [toDolist]="myTasks"></app-todo>
+  }
+  @else {
+    <app-no-tasks></app-no-tasks>
+  }

@@ -1,9 +1,16 @@
-<app-add-task (taskAmount)="updateTaskCount($event)" (brandNewItem)="addTask($event)"></app-add-task>
-
-
-@if(taskCount>0){
-  <app-todo [toDolist]="myTasks"></app-todo>
-}@else {
-  <app-no-tasks></app-no-tasks>
-}
-
+<!--This is my nav bar-->
+<header>
+  <ul class="nav nav-tabs justify-content-center">
+      
+      <li class="nav-item">
+        <a class="nav-link" routerLink="home" routerLinkActive="page">To Do</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-link" routerLink="done-tasks" routerLinkActive="page">Already Done</a>
+      </li>
+    
+  </ul>
+</header>
+<br>
+<router-outlet></router-outlet>
